@@ -493,8 +493,7 @@ def get_paths(patterns, start_dirs=None, max_depth=1):
             start_dirs = directory
             max_depth = 1
 
-    if not start_dirs or start_dirs == ".":
-        start_dirs = os.getcwd()
+    start_dirs = start_dirs or "."
     for start_dir in start_dirs.split(","):
         for root, dirs, files in os.walk(start_dir):  # pylint: disable=W0612
             if max_depth is not None:
