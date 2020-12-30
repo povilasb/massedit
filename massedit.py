@@ -491,7 +491,7 @@ def get_paths(patterns, start_dirs=None, max_depth=1):
         if directory:
             patterns = [os.path.basename(pattern)]
             start_dirs = directory
-            max_depth = 1
+            # max_depth = 1
 
     start_dirs = start_dirs or "."
     for start_dir in start_dirs.split(","):
